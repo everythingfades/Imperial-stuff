@@ -1,0 +1,25 @@
+// My solution to the Hardware Coursework.
+// My number is 125 or 1331 in base 4.
+// My functions are: (00)=(A xor B)’ (01)=B (10)=A’B (11)=A’+B
+<circuit>
+<number> 125 </number>
+<inputs> C1 C0 A B </inputs>
+<outputs> R </outputs>
+<gates>
+INVERTER(I1, A)
+INVERTER(I2, C0)
+INVERTER(I3, B)
+INVERTER(I4, C1)
+AND(A1, I2, I4)
+AND(A2, N1, N2)
+NAND(N1, I4, A)
+NAND(N2, I1, C1)
+NAND(N3, C1, C0)
+NAND(N4, A1, I3)
+NAND(N5, N3, N4)
+NAND(N6, I2, A2)
+NAND(N7, I1, N5)
+NAND(N8, B, N6)
+NAND(R, N7, N8)
+</gates>
+</circuit>

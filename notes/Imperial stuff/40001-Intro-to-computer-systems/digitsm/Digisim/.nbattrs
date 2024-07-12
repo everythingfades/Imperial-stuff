@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE attributes PUBLIC "-//NetBeans//DTD DefaultAttributes 1.0//EN" "http://www.netbeans.org/dtds/attributes-1_0.dtd">
+<attributes version="1.0">
+    <fileobject name="Digisim.java">
+        <attr name="class_dependency_java.awt.Frame" stringvalue="Digisim"/>
+        <attr name="class_dependency_java.awt.event.WindowAdapter" stringvalue="Digisim.Close"/>
+        <attr name="class_dependency_java.awt.event.ActionListener" stringvalue="Digisim"/>
+        <attr name="class_dependency_java.awt.event.MouseListener" stringvalue="Digisim.Mouse"/>
+    </fileobject>
+</attributes>

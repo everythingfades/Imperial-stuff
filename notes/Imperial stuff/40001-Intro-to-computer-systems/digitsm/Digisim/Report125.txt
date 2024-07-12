@@ -1,0 +1,62 @@
+Report on the design of circuit number 125
+
+Wires
+C1	Input
+C0	Input
+A	Input
+B	Input
+R	Output
+I1	Internal
+I2	Internal
+I3	Internal
+I4	Internal
+A1	Internal
+A2	Internal
+A3	Internal
+A4	Internal
+A5	Internal
+A6	Internal
+O2	Internal
+A7	Internal
+O3	Internal
+O1	Internal
+
+
+Gates
+NOT	I1	A	
+NOT	I2	C0	
+NOT	I3	B	
+NOT	I4	C1	
+AND	A1	I2	I4	
+AND	A2	I4	A	
+AND	A3	I1	C1	
+AND	A4	C0	C1	
+AND	A5	A1	I3	
+AND	A6	I1	O2	
+AND	A7	B	O3	
+OR	O1	A3	A2	
+OR	O2	A4	A5	
+OR	O3	O1	C0	
+OR	R	A6	A7	
+
+
+Truth Table
+
+C1	C0	A	B	R	Expected	Cycles	
+
+0	0	0	0	1	1		7
+0	0	0	1	0	0		6
+0	0	1	0	0	0		4
+0	0	1	1	1	1		4
+0	1	0	0	0	0		7
+0	1	0	1	1	1		3
+0	1	1	0	0	0		3
+0	1	1	1	1	1		3
+1	0	0	0	0	0		5
+1	0	0	1	1	1		3
+1	0	1	0	0	0		5
+1	0	1	1	0	0		2
+1	1	0	0	1	1		5
+1	1	0	1	1	1		2
+1	1	1	0	0	0		4
+1	1	1	1	1	1		3

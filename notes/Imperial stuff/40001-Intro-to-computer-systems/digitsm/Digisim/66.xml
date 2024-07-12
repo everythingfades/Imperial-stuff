@@ -1,0 +1,20 @@
+//  My solution to the Hardware Coursework.
+//  My number is 66 or 1002 in base 4.
+//  My functions are: (00)=(A oplus B)'   (01)=A   (10)=AB   (11)=A+B'
+
+<circuit>
+<number>   66  </number>
+<inputs>  C1 C0 A B  </inputs>
+<outputs>   R  </outputs>
+<gates>
+    INVERTER(I1, C0)
+    INVERTER(I2, C1)
+    AND(I3, I1, I2)
+    AND(I6, I3, I5)
+    AND(I9, C0, I8)
+    NOR(A, B, I5)
+    OR(I7, A, B)
+    OR(I8, I7, B)
+    OR(R, I6, I9)
+</gates>
+</circuit>
